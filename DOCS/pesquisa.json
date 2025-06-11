@@ -1,0 +1,25 @@
+[
+  {
+    "catserv": "licença software microsoft office licença permanente para microsoft office 365, 2019 ou superior, chave digital.",
+    "nome": "",
+    "quantidade": 1,
+    "precoMedio": "127,99",
+    "fornecedores": [
+      {
+        "cnpj": "62.577.929/0001-35",
+        "razaoSocial": "COMPANHIA DE PROCESSAMENTO DE DADOS DO ESTADO DE SAO PAULO - PRODESP",
+        "preco": "142,61"
+      },
+      {
+        "cnpj": "57.142.978/0001-05",
+        "razaoSocial": "BRASOFTWARE INFORMATICA LTDA",
+        "preco": "151,36"
+      },
+      {
+        "cnpj": "37.307.516/0001-93",
+        "razaoSocial": "AFOX COMERCIO E LOCACAO LTDA",
+        "preco": "89,99"
+      }
+    ]
+  }
+]
