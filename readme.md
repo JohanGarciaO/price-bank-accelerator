@@ -22,6 +22,9 @@ Siga os passos abaixo para utilizar o gerador:
 ### 4. Mova o arquivo baixado
 - Após o download, mova o arquivo **`pesquisa.json`** para a mesma pasta onde está localizado o arquivo **`SheetGenerate.py`**.
 
+### Obs.: 
+- Os passos 2 e 3 podem ser simplificados ao adicionar uma extenção ao navegador que execute o script sem precisar ficar copiando e colando.
+
 ---
 
 ## 🛠️ Requisitos
@@ -71,7 +74,7 @@ Se você tentar executar o `SheetGenerate.py` sem ter o `pesquisa.json` no diret
 
 **Solução:**
 - Verifique se o script `gerarPesquisa.js` foi executado corretamente.
-- Verifique se o arquivo `pesquisa.json` foi baixado e movido para o local correto.
+- Verifique se o arquivo `pesquisa.json` foi baixado e movido para o mesmo local que está o `SheetGenerate.py`.
 
 ---
 

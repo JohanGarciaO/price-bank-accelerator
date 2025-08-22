@@ -21,9 +21,8 @@ async function extrairDadosCotacao() {
         const precoMedioTexto = parseFloat(botaoPreco.getAttribute('data-precoestimado').trim().replace('R$', '').replace(',', '.').trim()).toFixed(2);
         const precoMedio = precoMedioTexto ? precoMedioTexto.replace('.', ',') : "0,00";
 
-        botaoPreco.click();
+        botaoPreco.click();        
         await waitElement(item,'.DivPrecosComprasNet_CotacaoItem #tablePrecos tbody');
-        // await new Promise(resolve => setTimeout(resolve, 2000));
 
         const fornecedores = [];
         const divPrecos = item.querySelector('.DivPrecosComprasNet_CotacaoItem');
@@ -37,7 +36,7 @@ async function extrairDadosCotacao() {
                 if (botaoDetalhes) {
                     botaoDetalhes.click();
                     await waitElement(linhas[i+1],'.PropostaVencedora');
-                    // await new Promise(resolve => setTimeout(resolve, 2000));
+                    window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
                 }
 
                 const linhaDetalhada = linhas[i + 1];
@@ -72,4 +71,20 @@ function downloadJson(dados, nomeArquivo) {
     document.body.removeChild(a);
 }
 
-extrairDadosCotacao();
+const prevBtnSign = document.querySelector('#div-gerar-etpr');
+
+if (prevBtnSign) {
+    const divGenerate = document.createElement("div");
+    divGenerate.className = "d-inline-block me-2";
+
+    const buttonGenerate = document.createElement("button");
+    buttonGenerate.className = "btn btn-sm btn-white shadow fw-bold text-dark-warning";
+    buttonGenerate.textContent = "Gerar Pesquisa"
+    buttonGenerate.addEventListener("click", extrairDadosCotacao);
+
+    divGenerate.appendChild(buttonGenerate);
+
+    prevBtnSign.parentNode.insertBefore(divGenerate, prevBtnSign);
+}
+
+// extrairDadosCotacao();

@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Banco de Preços Injector",
+    "version": "1.0",
+    "description": "Injeta os scripts agilizadores de tarefa.",
+    "content_scripts": [
+        {
+            "matches": ["https://www.bancodeprecos.com.br/*"],
+            "js": ["geraPesquisa.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": ["scripting"],
+    "icons": {
+        "128": "priceBank.png"
+    }
+}
