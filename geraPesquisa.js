@@ -79,7 +79,7 @@ if (prevBtnSign) {
 
     const buttonGenerate = document.createElement("button");
     buttonGenerate.className = "btn btn-sm btn-white shadow fw-bold text-dark-warning";
-    buttonGenerate.textContent = "Gerar Pesquisa"
+    buttonGenerate.textContent = "Baixar Arquivo de Preços"
     buttonGenerate.addEventListener("click", extrairDadosCotacao);
 
     divGenerate.appendChild(buttonGenerate);
